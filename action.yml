@@ -1,0 +1,16 @@
+name: "cache-cargo-bin-action"
+description: "A GitHub action that caches cargo-install-ed binaries."
+# inputs:
+#   custom-cache-key:
+#     description: "The custom cache key."
+#     default: ""
+#   strip:
+#     description: "A Flag that indicates whether or not stripping the binaries before saving to cache"
+#     default: true
+runs:
+  using: "node16"
+  main: "bundled/main/index.js"
+  post: "bundled/post/index.js"
+branding:
+  icon: "folder-plus"
+  color: "green"

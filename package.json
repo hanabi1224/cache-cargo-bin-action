@@ -1,0 +1,23 @@
+{
+  "name": "cache-cargo-bin-action",
+  "version": "1.0.0",
+  "description": "A GitHub action that caches cargo-install-ed binaries.",
+  "author": "hanabi1224",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "pnpm build:main && pnpm build:post",
+    "build:main": "ncc build -m -o bundled/main src/main.ts",
+    "build:post": "ncc build -m -o bundled/post src/post.ts"
+  },
+  "devDependencies": {
+    "@actions/cache": "^3.0.6",
+    "@actions/core": "^1.10.0",
+    "@types/node": "^18.11.9",
+    "@vercel/ncc": "^0.34.0",
+    "fs": "0.0.1-security",
+    "md5-file": "^5.0.0",
+    "path": "^0.12.7",
+    "typescript": "^4.9.3"
+  }
+}
