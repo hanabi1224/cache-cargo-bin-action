@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
+import * as os from "os";
 import * as core from "@actions/core";
 import * as md5File from "md5-file";
 
@@ -51,7 +52,7 @@ export function prepareCargoBinDirForSaving() {
 }
 
 function getCargoHome() {
-	return process.env.CARGO_HOME ?? `${process.env.HOME}/.cargo`;
+	return process.env.CARGO_HOME || `${os.homedir()}/.cargo`;
 }
 
 // https://github.com/Swatinem/rust-cache/blob/master/src/cleanup.ts#L57
