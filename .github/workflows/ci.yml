@@ -19,4 +19,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-      - run: cargo install --locked cargo-quickinstall mdbook
+      - run: cargo install --locked cargo-quickinstall

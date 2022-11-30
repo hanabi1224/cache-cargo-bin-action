@@ -1,6 +1,10 @@
 # cache-cargo-bin-action
 
-This action caches binaries installed via `cargo install`
+This action caches binaries installed via `cargo install`.
+
+# Features
+
+- automatically update cache when new bin versions are installed.
 
 # Usage
 
